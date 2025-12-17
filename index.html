@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>もぐらたたきゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>🔨 もぐらたたきゲーム 🔨</h1>
+
+        <div id="info-panel">
+            <h2>遊び方</h2>
+            <p>制限時間30秒！ランダムで出現する**もぐら**を叩いてスコアを稼ごう！</p>
+            <p>現在のスコア: <span id="score">0</span></p>
+            <p>残り時間: <span id="timer">30</span> 秒</p>
+        </div>
+        
+        <div id="control-panel">
+            <label for="speed-select">もぐらの表示時間（難易度）:</label>
+            <select id="speed-select">
+                <option value="1500">やさしい (1.5秒)</option>
+                <option value="1000" selected>ふつう (1.0秒)</option>
+                <option value="500">むずかしい (0.5秒)</option>
+            </select>
+            <button id="start-button">ゲームスタート</button>
+        </div>
+
+        <div id="game-board">
+            <div class="hole" id="hole-0"></div>
+            <div class="hole" id="hole-1"></div>
+            <div class="hole" id="hole-2"></div>
+            <div class="hole" id="hole-3"></div>
+            <div class="hole" id="hole-4"></div>
+            <div class="hole" id="hole-5"></div>
+            <div class="hole" id="hole-6"></div>
+            <div class="hole" id="hole-7"></div>
+            <div class="hole" id="hole-8"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

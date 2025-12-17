@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#info-panel, #control-panel {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* ゲームボード（3x3グリッド） */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列 */
+    grid-template-rows: repeat(3, 1fr);    /* 3行 */
+    gap: 10px;
+    width: 450px; /* 全体の幅 */
+    height: 450px; /* 全体の高さ */
+    margin: 0 auto;
+    background-color: #a0522d; /* 土の色 */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* 穴（マス）のスタイル */
+.hole {
+    width: 100%;
+    height: 100%;
+    background-color: #8b4513; /* 穴の色 */
+    border-radius: 50%; /* 円形 */
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    overflow: hidden; /* もぐらを隠すため */
+    /* 穴の画像を使用する場合は、こちらを調整 */
+    /* background-image: url('assets/hole.png'); 
+    background-size: cover; */
+}
+
+/* もぐらが出現したときのクラス */
+.hole.up {
+    /* もぐらの画像を表示 */
+    background-image: url('assets/mole.png'); 
+    background-size: cover; /* マス全体に画像を合わせる */
+    background-position: center bottom; /* 下端に配置 */
+    /* 背景色を穴の色に戻す、またはもぐらが全面を覆うように調整 */
+    background-color: transparent; 
+}
